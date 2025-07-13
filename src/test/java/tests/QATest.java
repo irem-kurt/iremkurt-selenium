@@ -16,7 +16,7 @@ import pages.QAJobsPage;
 import java.time.Duration;
 
 
-public class InsiderQATest {
+public class QATest {
 
     private WebDriver driver;
     private HomePage homePage;
