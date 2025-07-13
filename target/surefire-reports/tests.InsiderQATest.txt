@@ -1,0 +1,56 @@
+-------------------------------------------------------------------------------
+Test set: tests.InsiderQATest
+-------------------------------------------------------------------------------
+Tests run: 4, Failures: 4, Errors: 0, Skipped: 0, Time elapsed: 39.782 s <<< FAILURE! - in tests.InsiderQATest
+testHomePageIsOpened(tests.InsiderQATest)  Time elapsed: 13.603 s  <<< FAILURE!
+org.openqa.selenium.NoSuchElementException: 
+no such element: Unable to locate element: {"method":"css selector","selector":"div.navbar"}
+  (Session info: chrome=138.0.7204.93)
+For documentation on this error, please visit: https://www.selenium.dev/documentation/webdriver/troubleshooting/errors#no-such-element-exception
+Build info: version: '4.21.0', revision: '79ed462ef4'
+System info: os.name: 'Mac OS X', os.arch: 'aarch64', os.version: '15.4.1', java.version: '24.0.1'
+Driver info: org.openqa.selenium.chrome.ChromeDriver
+Command: [1fed7d9606dea1c5b9cf6f545622567c, findElement {value=div.navbar, using=css selector}]
+Capabilities {acceptInsecureCerts: false, browserName: chrome, browserVersion: 138.0.7204.93, chrome: {chromedriverVersion: 138.0.7204.94 (545025748884..., userDataDir: /var/folders/hz/cwg6cg4n5ms...}, fedcm:accounts: true, goog:chromeOptions: {debuggerAddress: localhost:56204}, networkConnectionEnabled: false, pageLoadStrategy: normal, platformName: mac, proxy: Proxy(), se:cdp: ws://localhost:56204/devtoo..., se:cdpVersion: 138.0.7204.93, setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, webauthn:extension:credBlob: true, webauthn:extension:largeBlob: true, webauthn:extension:minPinLength: true, webauthn:extension:prf: true, webauthn:virtualAuthenticators: true}
+Session ID: 1fed7d9606dea1c5b9cf6f545622567c
+	at tests.InsiderQATest.testHomePageIsOpened(InsiderQATest.java:36)
+
+testCareerPageBlocksAreVisible(tests.InsiderQATest)  Time elapsed: 11.922 s  <<< FAILURE!
+org.openqa.selenium.NoSuchElementException: 
+no such element: Unable to locate element: {"method":"xpath","selector":"//section[contains(@class,'teams')]"}
+  (Session info: chrome=138.0.7204.93)
+For documentation on this error, please visit: https://www.selenium.dev/documentation/webdriver/troubleshooting/errors#no-such-element-exception
+Build info: version: '4.21.0', revision: '79ed462ef4'
+System info: os.name: 'Mac OS X', os.arch: 'aarch64', os.version: '15.4.1', java.version: '24.0.1'
+Driver info: org.openqa.selenium.chrome.ChromeDriver
+Command: [1fed7d9606dea1c5b9cf6f545622567c, findElement {value=//section[contains(@class,'teams')], using=xpath}]
+Capabilities {acceptInsecureCerts: false, browserName: chrome, browserVersion: 138.0.7204.93, chrome: {chromedriverVersion: 138.0.7204.94 (545025748884..., userDataDir: /var/folders/hz/cwg6cg4n5ms...}, fedcm:accounts: true, goog:chromeOptions: {debuggerAddress: localhost:56204}, networkConnectionEnabled: false, pageLoadStrategy: normal, platformName: mac, proxy: Proxy(), se:cdp: ws://localhost:56204/devtoo..., se:cdpVersion: 138.0.7204.93, setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, webauthn:extension:credBlob: true, webauthn:extension:largeBlob: true, webauthn:extension:minPinLength: true, webauthn:extension:prf: true, webauthn:virtualAuthenticators: true}
+Session ID: 1fed7d9606dea1c5b9cf6f545622567c
+	at tests.InsiderQATest.testCareerPageBlocksAreVisible(InsiderQATest.java:44)
+
+testQAJobsFilterAndValidation(tests.InsiderQATest)  Time elapsed: 2.005 s  <<< FAILURE!
+org.openqa.selenium.ElementClickInterceptedException: 
+element click intercepted: Element <span class="select2-selection__rendered" id="select2-filter-by-location-container" role="textbox" aria-readonly="true" title="All">...</span> is not clickable at point (420, 609). Other element would receive the click: <h5 role="heading" aria-level="5" tabindex="0" id="wt-cli-cookie-banner-title" style="display:block;">...</h5>
+  (Session info: chrome=138.0.7204.93)
+Build info: version: '4.21.0', revision: '79ed462ef4'
+System info: os.name: 'Mac OS X', os.arch: 'aarch64', os.version: '15.4.1', java.version: '24.0.1'
+Driver info: org.openqa.selenium.chrome.ChromeDriver
+Command: [1fed7d9606dea1c5b9cf6f545622567c, clickElement {id=f.99C9A820F12ECB46924830461B059FE4.d.5CB0E605D2EF718BC285B0D6B3EE2FFC.e.304}]
+Capabilities {acceptInsecureCerts: false, browserName: chrome, browserVersion: 138.0.7204.93, chrome: {chromedriverVersion: 138.0.7204.94 (545025748884..., userDataDir: /var/folders/hz/cwg6cg4n5ms...}, fedcm:accounts: true, goog:chromeOptions: {debuggerAddress: localhost:56204}, networkConnectionEnabled: false, pageLoadStrategy: normal, platformName: mac, proxy: Proxy(), se:cdp: ws://localhost:56204/devtoo..., se:cdpVersion: 138.0.7204.93, setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, webauthn:extension:credBlob: true, webauthn:extension:largeBlob: true, webauthn:extension:minPinLength: true, webauthn:extension:prf: true, webauthn:virtualAuthenticators: true}
+Element: [[ChromeDriver: chrome on mac (1fed7d9606dea1c5b9cf6f545622567c)] -> id: select2-filter-by-location-container]
+Session ID: 1fed7d9606dea1c5b9cf6f545622567c
+	at tests.InsiderQATest.testQAJobsFilterAndValidation(InsiderQATest.java:53)
+
+testViewRoleRedirectsToLeverPage(tests.InsiderQATest)  Time elapsed: 2.76 s  <<< FAILURE!
+org.openqa.selenium.ElementClickInterceptedException: 
+element click intercepted: Element is not clickable at point (270, 1140)
+  (Session info: chrome=138.0.7204.93)
+Build info: version: '4.21.0', revision: '79ed462ef4'
+System info: os.name: 'Mac OS X', os.arch: 'aarch64', os.version: '15.4.1', java.version: '24.0.1'
+Driver info: org.openqa.selenium.chrome.ChromeDriver
+Command: [1fed7d9606dea1c5b9cf6f545622567c, clickElement {id=f.99C9A820F12ECB46924830461B059FE4.d.5CB0E605D2EF718BC285B0D6B3EE2FFC.e.308}]
+Capabilities {acceptInsecureCerts: false, browserName: chrome, browserVersion: 138.0.7204.93, chrome: {chromedriverVersion: 138.0.7204.94 (545025748884..., userDataDir: /var/folders/hz/cwg6cg4n5ms...}, fedcm:accounts: true, goog:chromeOptions: {debuggerAddress: localhost:56204}, networkConnectionEnabled: false, pageLoadStrategy: normal, platformName: mac, proxy: Proxy(), se:cdp: ws://localhost:56204/devtoo..., se:cdpVersion: 138.0.7204.93, setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, webauthn:extension:credBlob: true, webauthn:extension:largeBlob: true, webauthn:extension:minPinLength: true, webauthn:extension:prf: true, webauthn:virtualAuthenticators: true}
+Element: [[ChromeDriver: chrome on mac (1fed7d9606dea1c5b9cf6f545622567c)] -> xpath: (//a[contains(text(),'View Role')])[1]]
+Session ID: 1fed7d9606dea1c5b9cf6f545622567c
+	at tests.InsiderQATest.testViewRoleRedirectsToLeverPage(InsiderQATest.java:63)
+
