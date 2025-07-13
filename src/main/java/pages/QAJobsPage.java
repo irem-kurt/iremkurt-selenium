@@ -1,10 +1,8 @@
 package pages;
-
 import org.openqa.selenium.*;
 import org.openqa.selenium.interactions.Actions;
 import org.openqa.selenium.support.ui.ExpectedConditions;
 import org.openqa.selenium.support.ui.WebDriverWait;
-
 import java.time.Duration;
 import java.util.List;
 import java.util.Set;
@@ -17,13 +15,11 @@ public class QAJobsPage extends BasePage {
     public QAJobsPage(WebDriver driver) {
         super(driver);
     }
-
     public void clickSeeAllQAJobs() {
         acceptCookiesIfPresent();
         WebElement seeAllQAJobsBtn = driver.findElement(By.xpath("//a[contains(text(),'See all QA jobs')]"));
         seeAllQAJobsBtn.click();
     }
-
     public void filterJobsByLocation(String location) throws InterruptedException {
         waitForElementToBeVisible(departmentFilterQATitle, 20); //Added due to long loading time of job filters.
         clickOnObject(locationFilter);
@@ -38,7 +34,6 @@ public class QAJobsPage extends BasePage {
 
         System.out.println("✅ Department selected using native <select>: " + department);
     }
-
     public void clickFirstViewRoleAndSwitchToNewTab() throws InterruptedException {
         WebDriverWait wait = new WebDriverWait(driver, Duration.ofSeconds(50));
         Actions actions = new Actions(driver);
@@ -97,6 +92,10 @@ public class QAJobsPage extends BasePage {
     }
     public List<WebElement> getAllVisibleJobCards() {
         return driver.findElements(By.cssSelector("div.position-list-item"));
+    }
+    public void scrollIntoElement() throws InterruptedException {
+        ((JavascriptExecutor) driver).executeScript("window.scrollTo(0, document.body.scrollHeight);");
+        Thread.sleep(1000);
     }
 
 }

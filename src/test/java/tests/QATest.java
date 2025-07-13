@@ -48,11 +48,9 @@ public class QATest {
         Assert.assertTrue(careerPage.isLifeAtInsiderBlockVisible(), "Life at Insider block not visible!");
     }
 
-    @Test(priority = 3, description = "Verify succesful filtering of QA jobs by location and department. " +
-            "Redirects to application form. May Department selection fail on 13inch due to layout shift but it selects Senior Software Quality Assurance Engineer job")
+    @Test(priority = 3, description = "Verify succesful filtering of QA jobs by location and department.")
 
     public void testQAJobsFilterAndValidation() throws InterruptedException {
-
         driver.get("https://useinsider.com/careers/quality-assurance/");
 
         qaJobsPage.clickSeeAllQAJobs();
@@ -60,19 +58,18 @@ public class QATest {
         qaJobsPage.filterJobsByDepartment("Quality Assurance");
         Thread.sleep(2000);
         qaJobsPage.waitUntilJobsAreLoaded();
+        qaJobsPage.scrollIntoElement();
 
         for (WebElement job : qaJobsPage.getAllVisibleJobCards()) {
             Assert.assertTrue(job.getText().contains("Istanbul"));
             Assert.assertTrue(job.getText().contains("Quality Assurance"));
         }
     }
-
     @Test(priority = 4, description = "Verify that clicking 'View Role' redirects to the Lever application form.")
     public void testViewRoleRedirectsToLeverPage() throws InterruptedException {
         qaJobsPage.clickFirstViewRoleAndSwitchToNewTab();
         Assert.assertTrue(driver.getCurrentUrl().contains("lever.co"), "Not redirected to Lever application form.");
     }
-
     @AfterClass
     public void tearDown() {
         if (driver != null) {
