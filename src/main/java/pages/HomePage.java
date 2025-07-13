@@ -3,6 +3,11 @@ package pages;
 import org.openqa.selenium.By;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
+import org.openqa.selenium.interactions.Actions;
+import org.openqa.selenium.support.ui.ExpectedConditions;
+import org.openqa.selenium.support.ui.WebDriverWait;
+
+import java.time.Duration;
 
 public class HomePage extends BasePage {
 
@@ -18,10 +23,14 @@ public class HomePage extends BasePage {
 
     // Navigate to Careers page via Company menu
     public void goToCareersPage() {
-        WebElement companyMenu = driver.findElement(By.xpath("//*[@id=\"navbarDropdownMenuLink\"]"));
-        companyMenu.click();
 
-        WebElement careersLink = driver.findElement(By.xpath("//*[@id=\"navbarNavDropdown\"]/ul[1]/li[6]/div/div[2]/a[2]"));
+        WebDriverWait wait = new WebDriverWait(driver, Duration.ofSeconds(10));
+        WebElement companyMenu = wait.until(ExpectedConditions.elementToBeClickable(By.xpath("//a[contains(text(),'Company')]")));
+
+        Actions actions = new Actions(driver);
+        actions.moveToElement(companyMenu).perform();  // mouse over
+
+        WebElement careersLink = wait.until(ExpectedConditions.elementToBeClickable(By.xpath("//a[contains(text(),'Careers')]")));
         careersLink.click();
     }
 }
