@@ -15,7 +15,6 @@ import pages.QAJobsPage;
 
 import java.time.Duration;
 
-
 public class QATest {
 
     private WebDriver driver;
@@ -50,7 +49,9 @@ public class QATest {
         Assert.assertTrue(careerPage.isLifeAtInsiderBlockVisible(), "Life at Insider block not visible!");
     }
 
-    @Test(priority = 3, description = "Verify filtering of QA jobs by location and department.")
+    @Test(priority = 3, description = "Verify succesful filtering of QA jobs by location and department. " +
+            "Redirects to application form. May Department selection fail on 13inch due to layout shift but it selects Senior Software Quality Assurance Engineer job")
+
     public void testQAJobsFilterAndValidation() throws InterruptedException {
 
         driver.get("https://useinsider.com/careers/quality-assurance/");

@@ -3,7 +3,6 @@ package pages;
 import org.openqa.selenium.*;
 import org.openqa.selenium.interactions.Actions;
 import org.openqa.selenium.support.ui.ExpectedConditions;
-import org.openqa.selenium.support.ui.Select;
 import org.openqa.selenium.support.ui.WebDriverWait;
 
 import java.time.Duration;
@@ -12,7 +11,7 @@ import java.util.Set;
 public class QAJobsPage extends BasePage {
     private By departmentFilterQATitle = By.cssSelector("#select2-filter-by-department-container[title='Quality Assurance']");
     private By locationFilter = By.cssSelector("#select2-filter-by-location-container");
-
+    private By departmentFilter = By.cssSelector("#select2-filter-by-department-container");
     public QAJobsPage(WebDriver driver) {
         super(driver);
     }
@@ -29,23 +28,15 @@ public class QAJobsPage extends BasePage {
         clickOnObject(By.cssSelector("li[data-select2-id*= '" + location + "' ]"));
         //Thread.sleep(1000); // Wait for the selection to register
     }
-
     public void filterJobsByDepartment(String department) {
-        WebDriverWait wait = new WebDriverWait(driver, Duration.ofSeconds(15));
-
-        // 1. Wait for the native <select> to be present
-        WebElement selectElement = wait.until(ExpectedConditions.presenceOfElementLocated(
-                By.id("filter-by-department")));
-
-        // 2. Use Select to choose by visible text
-        Select departmentDropdown = new Select(selectElement);
-        departmentDropdown.selectByVisibleText(department);
-
+        waitForElementToBeVisible(departmentFilterQATitle, 20); //Added due to long loading time of job filters.
+        clickOnObject(departmentFilter);
+        clickOnObject(By.cssSelector("li[data-select2-id*= '"+department+"' ]"));
         System.out.println("✅ Department selected using native <select>: " + department);
     }
 
     public void clickFirstViewRoleAndSwitchToNewTab() throws InterruptedException {
-        WebDriverWait wait = new WebDriverWait(driver, Duration.ofSeconds(15));
+        WebDriverWait wait = new WebDriverWait(driver, Duration.ofSeconds(50));
         Actions actions = new Actions(driver);
         JavascriptExecutor js = (JavascriptExecutor) driver;
 
@@ -99,5 +90,4 @@ public class QAJobsPage extends BasePage {
         ));
         System.out.println("✅ Job list loaded.");
     }
-
 }

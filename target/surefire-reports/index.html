@@ -25,7 +25,7 @@
       <span class="top-banner-title-font">Test results</span>
       <button id="button" class="button">Switch Retro Theme</button> <!-- button -->
       <br/>
-      <span class="top-banner-font-1">1 suite, 4 failed tests</span>
+      <span class="top-banner-font-1">1 suite, 2 failed tests</span>
     </div> <!-- top-banner-root -->
     <div class="navigator-root">
       <div class="navigator-suite-header">
@@ -92,7 +92,7 @@
               <div class="suite-section-content">
                 <ul>
                   <li>
-                    <span class="method-stats">4 methods, 4 failed,   </span>
+                    <span class="method-stats">4 methods, 2 failed,   2 passed</span>
                   </li>
                   <li>
                     <span class="method-list-title failed">Failed methods</span>
@@ -103,25 +103,34 @@
                     <div class="method-list-content failed suite-Surefire_suite">
                       <span>
                         <img src="failed.png" width="3%"/>
-                        <a href="#" panel-name="suite-Surefire_suite" title="tests.InsiderQATest" class="method navigator-link" hash-for-method="testCareerPageBlocksAreVisible">testCareerPageBlocksAreVisible</a> <!-- method navigator-link -->
+                        <a href="#" panel-name="suite-Surefire_suite" title="tests.QATest" class="method navigator-link" hash-for-method="testQAJobsFilterAndValidation">testQAJobsFilterAndValidation</a> <!-- method navigator-link -->
                       </span>
                       <br/>
                       <span>
                         <img src="failed.png" width="3%"/>
-                        <a href="#" panel-name="suite-Surefire_suite" title="tests.InsiderQATest" class="method navigator-link" hash-for-method="testHomePageIsOpened">testHomePageIsOpened</a> <!-- method navigator-link -->
-                      </span>
-                      <br/>
-                      <span>
-                        <img src="failed.png" width="3%"/>
-                        <a href="#" panel-name="suite-Surefire_suite" title="tests.InsiderQATest" class="method navigator-link" hash-for-method="testQAJobsFilterAndValidation">testQAJobsFilterAndValidation</a> <!-- method navigator-link -->
-                      </span>
-                      <br/>
-                      <span>
-                        <img src="failed.png" width="3%"/>
-                        <a href="#" panel-name="suite-Surefire_suite" title="tests.InsiderQATest" class="method navigator-link" hash-for-method="testViewRoleRedirectsToLeverPage">testViewRoleRedirectsToLeverPage</a> <!-- method navigator-link -->
+                        <a href="#" panel-name="suite-Surefire_suite" title="tests.QATest" class="method navigator-link" hash-for-method="testViewRoleRedirectsToLeverPage">testViewRoleRedirectsToLeverPage</a> <!-- method navigator-link -->
                       </span>
                       <br/>
                     </div> <!-- method-list-content failed suite-Surefire_suite -->
+                  </li>
+                  <li>
+                    <span class="method-list-title passed">Passed methods</span>
+                    <span class="show-or-hide-methods passed">
+                      <a href="#" panel-name="suite-Surefire_suite" class="hide-methods passed suite-Surefire_suite"> (hide)</a> <!-- hide-methods passed suite-Surefire_suite -->
+                      <a href="#" panel-name="suite-Surefire_suite" class="show-methods passed suite-Surefire_suite"> (show)</a> <!-- show-methods passed suite-Surefire_suite -->
+                    </span>
+                    <div class="method-list-content passed suite-Surefire_suite">
+                      <span>
+                        <img src="passed.png" width="3%"/>
+                        <a href="#" panel-name="suite-Surefire_suite" title="tests.QATest" class="method navigator-link" hash-for-method="testCareerPageBlocksAreVisible">testCareerPageBlocksAreVisible</a> <!-- method navigator-link -->
+                      </span>
+                      <br/>
+                      <span>
+                        <img src="passed.png" width="3%"/>
+                        <a href="#" panel-name="suite-Surefire_suite" title="tests.QATest" class="method navigator-link" hash-for-method="testHomePageIsOpened">testHomePageIsOpened</a> <!-- method navigator-link -->
+                      </span>
+                      <br/>
+                    </div> <!-- method-list-content passed suite-Surefire_suite -->
                   </li>
                 </ul>
               </div> <!-- suite-section-content -->
@@ -136,101 +145,21 @@
           <div class="suite-Surefire_suite-class-failed">
             <div class="main-panel-header rounded-window-top">
               <img src="failed.png"/>
-              <span class="class-name">tests.InsiderQATest</span>
+              <span class="class-name">tests.QATest</span>
             </div> <!-- main-panel-header rounded-window-top -->
             <div class="main-panel-content rounded-window-bottom">
-              <div class="method">
-                <div class="method-content">
-                  <a name="testCareerPageBlocksAreVisible">
-                  </a> <!-- testCareerPageBlocksAreVisible -->
-                  <span class="method-name">testCareerPageBlocksAreVisible</span>
-                  <div class="stack-trace">org.openqa.selenium.NoSuchElementException: no such element: Unable to locate element: {&quot;method&quot;:&quot;xpath&quot;,&quot;selector&quot;:&quot;//section[contains(@class,&apos;teams&apos;)]&quot;}
-  (Session info: chrome=138.0.7204.93)
-For documentation on this error, please visit: https://www.selenium.dev/documentation/webdriver/troubleshooting/errors#no-such-element-exception
-Build info: version: &apos;4.21.0&apos;, revision: &apos;79ed462ef4&apos;
-System info: os.name: &apos;Mac OS X&apos;, os.arch: &apos;aarch64&apos;, os.version: &apos;15.4.1&apos;, java.version: &apos;24.0.1&apos;
-Driver info: org.openqa.selenium.chrome.ChromeDriver
-Command: [1fed7d9606dea1c5b9cf6f545622567c, findElement {value=//section[contains(@class,&apos;teams&apos;)], using=xpath}]
-Capabilities {acceptInsecureCerts: false, browserName: chrome, browserVersion: 138.0.7204.93, chrome: {chromedriverVersion: 138.0.7204.94 (545025748884..., userDataDir: /var/folders/hz/cwg6cg4n5ms...}, fedcm:accounts: true, goog:chromeOptions: {debuggerAddress: localhost:56204}, networkConnectionEnabled: false, pageLoadStrategy: normal, platformName: mac, proxy: Proxy(), se:cdp: ws://localhost:56204/devtoo..., se:cdpVersion: 138.0.7204.93, setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, webauthn:extension:credBlob: true, webauthn:extension:largeBlob: true, webauthn:extension:minPinLength: true, webauthn:extension:prf: true, webauthn:virtualAuthenticators: true}
-Session ID: 1fed7d9606dea1c5b9cf6f545622567c
-	at org.openqa.selenium.remote.ErrorCodec.decode(ErrorCodec.java:167)
-	at org.openqa.selenium.remote.codec.w3c.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:138)
-	at org.openqa.selenium.remote.codec.w3c.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:50)
-	at org.openqa.selenium.remote.HttpCommandExecutor.execute(HttpCommandExecutor.java:190)
-	at org.openqa.selenium.remote.service.DriverCommandExecutor.invokeExecute(DriverCommandExecutor.java:216)
-	at org.openqa.selenium.remote.service.DriverCommandExecutor.execute(DriverCommandExecutor.java:174)
-	at org.openqa.selenium.remote.RemoteWebDriver.execute(RemoteWebDriver.java:518)
-	at org.openqa.selenium.remote.ElementLocation$ElementFinder$2.findElement(ElementLocation.java:165)
-	at org.openqa.selenium.remote.ElementLocation.findElement(ElementLocation.java:59)
-	at org.openqa.selenium.remote.RemoteWebDriver.findElement(RemoteWebDriver.java:355)
-	at org.openqa.selenium.remote.RemoteWebDriver.findElement(RemoteWebDriver.java:349)
-	at pages.CareerPage.isTeamsBlockVisible(CareerPage.java:19)
-	at tests.InsiderQATest.testCareerPageBlocksAreVisible(InsiderQATest.java:44)
-	at java.base/java.util.ArrayList.forEach(ArrayList.java:1604)
-... Removed 33 stack frames
-</div> <!-- stack-trace -->
-                </div> <!-- method-content -->
-              </div> <!-- method -->
-              <div class="method">
-                <div class="method-content">
-                  <a name="testHomePageIsOpened">
-                  </a> <!-- testHomePageIsOpened -->
-                  <span class="method-name">testHomePageIsOpened</span>
-                  <div class="stack-trace">org.openqa.selenium.NoSuchElementException: no such element: Unable to locate element: {&quot;method&quot;:&quot;css selector&quot;,&quot;selector&quot;:&quot;div.navbar&quot;}
-  (Session info: chrome=138.0.7204.93)
-For documentation on this error, please visit: https://www.selenium.dev/documentation/webdriver/troubleshooting/errors#no-such-element-exception
-Build info: version: &apos;4.21.0&apos;, revision: &apos;79ed462ef4&apos;
-System info: os.name: &apos;Mac OS X&apos;, os.arch: &apos;aarch64&apos;, os.version: &apos;15.4.1&apos;, java.version: &apos;24.0.1&apos;
-Driver info: org.openqa.selenium.chrome.ChromeDriver
-Command: [1fed7d9606dea1c5b9cf6f545622567c, findElement {value=div.navbar, using=css selector}]
-Capabilities {acceptInsecureCerts: false, browserName: chrome, browserVersion: 138.0.7204.93, chrome: {chromedriverVersion: 138.0.7204.94 (545025748884..., userDataDir: /var/folders/hz/cwg6cg4n5ms...}, fedcm:accounts: true, goog:chromeOptions: {debuggerAddress: localhost:56204}, networkConnectionEnabled: false, pageLoadStrategy: normal, platformName: mac, proxy: Proxy(), se:cdp: ws://localhost:56204/devtoo..., se:cdpVersion: 138.0.7204.93, setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, webauthn:extension:credBlob: true, webauthn:extension:largeBlob: true, webauthn:extension:minPinLength: true, webauthn:extension:prf: true, webauthn:virtualAuthenticators: true}
-Session ID: 1fed7d9606dea1c5b9cf6f545622567c
-	at org.openqa.selenium.remote.ErrorCodec.decode(ErrorCodec.java:167)
-	at org.openqa.selenium.remote.codec.w3c.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:138)
-	at org.openqa.selenium.remote.codec.w3c.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:50)
-	at org.openqa.selenium.remote.HttpCommandExecutor.execute(HttpCommandExecutor.java:190)
-	at org.openqa.selenium.remote.service.DriverCommandExecutor.invokeExecute(DriverCommandExecutor.java:216)
-	at org.openqa.selenium.remote.service.DriverCommandExecutor.execute(DriverCommandExecutor.java:174)
-	at org.openqa.selenium.remote.RemoteWebDriver.execute(RemoteWebDriver.java:518)
-	at org.openqa.selenium.remote.ElementLocation$ElementFinder$2.findElement(ElementLocation.java:165)
-	at org.openqa.selenium.remote.ElementLocation.findElement(ElementLocation.java:59)
-	at org.openqa.selenium.remote.RemoteWebDriver.findElement(RemoteWebDriver.java:355)
-	at org.openqa.selenium.remote.RemoteWebDriver.findElement(RemoteWebDriver.java:349)
-	at pages.HomePage.isHomePageLoaded(HomePage.java:15)
-	at tests.InsiderQATest.testHomePageIsOpened(InsiderQATest.java:36)
-	at java.base/java.util.ArrayList.forEach(ArrayList.java:1604)
-... Removed 33 stack frames
-</div> <!-- stack-trace -->
-                </div> <!-- method-content -->
-              </div> <!-- method -->
               <div class="method">
                 <div class="method-content">
                   <a name="testQAJobsFilterAndValidation">
                   </a> <!-- testQAJobsFilterAndValidation -->
                   <span class="method-name">testQAJobsFilterAndValidation</span>
-                  <div class="stack-trace">org.openqa.selenium.ElementClickInterceptedException: element click intercepted: Element &lt;span class=&quot;select2-selection__rendered&quot; id=&quot;select2-filter-by-location-container&quot; role=&quot;textbox&quot; aria-readonly=&quot;true&quot; title=&quot;All&quot;&gt;...&lt;/span&gt; is not clickable at point (420, 609). Other element would receive the click: &lt;h5 role=&quot;heading&quot; aria-level=&quot;5&quot; tabindex=&quot;0&quot; id=&quot;wt-cli-cookie-banner-title&quot; style=&quot;display:block;&quot;&gt;...&lt;/h5&gt;
-  (Session info: chrome=138.0.7204.93)
-Build info: version: &apos;4.21.0&apos;, revision: &apos;79ed462ef4&apos;
-System info: os.name: &apos;Mac OS X&apos;, os.arch: &apos;aarch64&apos;, os.version: &apos;15.4.1&apos;, java.version: &apos;24.0.1&apos;
-Driver info: org.openqa.selenium.chrome.ChromeDriver
-Command: [1fed7d9606dea1c5b9cf6f545622567c, clickElement {id=f.99C9A820F12ECB46924830461B059FE4.d.5CB0E605D2EF718BC285B0D6B3EE2FFC.e.304}]
-Capabilities {acceptInsecureCerts: false, browserName: chrome, browserVersion: 138.0.7204.93, chrome: {chromedriverVersion: 138.0.7204.94 (545025748884..., userDataDir: /var/folders/hz/cwg6cg4n5ms...}, fedcm:accounts: true, goog:chromeOptions: {debuggerAddress: localhost:56204}, networkConnectionEnabled: false, pageLoadStrategy: normal, platformName: mac, proxy: Proxy(), se:cdp: ws://localhost:56204/devtoo..., se:cdpVersion: 138.0.7204.93, setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, webauthn:extension:credBlob: true, webauthn:extension:largeBlob: true, webauthn:extension:minPinLength: true, webauthn:extension:prf: true, webauthn:virtualAuthenticators: true}
-Element: [[ChromeDriver: chrome on mac (1fed7d9606dea1c5b9cf6f545622567c)] -&gt; id: select2-filter-by-location-container]
-Session ID: 1fed7d9606dea1c5b9cf6f545622567c
-	at org.openqa.selenium.remote.ErrorCodec.decode(ErrorCodec.java:167)
-	at org.openqa.selenium.remote.codec.w3c.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:138)
-	at org.openqa.selenium.remote.codec.w3c.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:50)
-	at org.openqa.selenium.remote.HttpCommandExecutor.execute(HttpCommandExecutor.java:190)
-	at org.openqa.selenium.remote.service.DriverCommandExecutor.invokeExecute(DriverCommandExecutor.java:216)
-	at org.openqa.selenium.remote.service.DriverCommandExecutor.execute(DriverCommandExecutor.java:174)
-	at org.openqa.selenium.remote.RemoteWebDriver.execute(RemoteWebDriver.java:518)
-	at org.openqa.selenium.remote.RemoteWebElement.execute(RemoteWebElement.java:223)
-	at org.openqa.selenium.remote.RemoteWebElement.click(RemoteWebElement.java:76)
-	at pages.QAJobsPage.filterByLocationAndDepartment(QAJobsPage.java:23)
-	at tests.InsiderQATest.testQAJobsFilterAndValidation(InsiderQATest.java:53)
+                  <div class="stack-trace">java.lang.AssertionError: ❌ Job not filtered by department! expected [true] but found [false]
+	at tests.QATest.testQAJobsFilterAndValidation(QATest.java:66)
 	at java.base/java.util.ArrayList.forEach(ArrayList.java:1604)
 ... Removed 33 stack frames
 </div> <!-- stack-trace -->
+                  <em>
+(Verify filtering of QA jobs by location and department.)                  </em>
                 </div> <!-- method-content -->
               </div> <!-- method -->
               <div class="method">
@@ -238,15 +167,15 @@ Session ID: 1fed7d9606dea1c5b9cf6f545622567c
                   <a name="testViewRoleRedirectsToLeverPage">
                   </a> <!-- testViewRoleRedirectsToLeverPage -->
                   <span class="method-name">testViewRoleRedirectsToLeverPage</span>
-                  <div class="stack-trace">org.openqa.selenium.ElementClickInterceptedException: element click intercepted: Element is not clickable at point (270, 1140)
-  (Session info: chrome=138.0.7204.93)
+                  <div class="stack-trace">org.openqa.selenium.ElementClickInterceptedException: element click intercepted: Element &lt;a href=&quot;https://jobs.lever.co/useinsider/6b1cb4da-e2b8-4eff-83b7-2931c44b4e69&quot; class=&quot;btn btn-navy rounded pt-2 pr-5 pb-2 pl-5&quot; target=&quot;_blank&quot;&gt;...&lt;/a&gt; is not clickable at point (270, 210). Other element would receive the click: &lt;section id=&quot;career-position-filter&quot; class=&quot;bg-light&quot;&gt;...&lt;/section&gt;
+  (Session info: chrome=138.0.7204.101)
 Build info: version: &apos;4.21.0&apos;, revision: &apos;79ed462ef4&apos;
 System info: os.name: &apos;Mac OS X&apos;, os.arch: &apos;aarch64&apos;, os.version: &apos;15.4.1&apos;, java.version: &apos;24.0.1&apos;
 Driver info: org.openqa.selenium.chrome.ChromeDriver
-Command: [1fed7d9606dea1c5b9cf6f545622567c, clickElement {id=f.99C9A820F12ECB46924830461B059FE4.d.5CB0E605D2EF718BC285B0D6B3EE2FFC.e.308}]
-Capabilities {acceptInsecureCerts: false, browserName: chrome, browserVersion: 138.0.7204.93, chrome: {chromedriverVersion: 138.0.7204.94 (545025748884..., userDataDir: /var/folders/hz/cwg6cg4n5ms...}, fedcm:accounts: true, goog:chromeOptions: {debuggerAddress: localhost:56204}, networkConnectionEnabled: false, pageLoadStrategy: normal, platformName: mac, proxy: Proxy(), se:cdp: ws://localhost:56204/devtoo..., se:cdpVersion: 138.0.7204.93, setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, webauthn:extension:credBlob: true, webauthn:extension:largeBlob: true, webauthn:extension:minPinLength: true, webauthn:extension:prf: true, webauthn:virtualAuthenticators: true}
-Element: [[ChromeDriver: chrome on mac (1fed7d9606dea1c5b9cf6f545622567c)] -&gt; xpath: (//a[contains(text(),&apos;View Role&apos;)])[1]]
-Session ID: 1fed7d9606dea1c5b9cf6f545622567c
+Command: [fbe9e02d874e8e50715e885e59c63bda, clickElement {id=f.743D88F009AD5B6AC1B4E0C936E5622B.d.B9AF698E851489413E84B4A385A1A4AF.e.312}]
+Capabilities {acceptInsecureCerts: false, browserName: chrome, browserVersion: 138.0.7204.101, chrome: {chromedriverVersion: 138.0.7204.94 (545025748884..., userDataDir: /var/folders/hz/cwg6cg4n5ms...}, fedcm:accounts: true, goog:chromeOptions: {debuggerAddress: localhost:64594}, networkConnectionEnabled: false, pageLoadStrategy: normal, platformName: mac, proxy: Proxy(), se:cdp: ws://localhost:64594/devtoo..., se:cdpVersion: 138.0.7204.101, setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, webauthn:extension:credBlob: true, webauthn:extension:largeBlob: true, webauthn:extension:minPinLength: true, webauthn:extension:prf: true, webauthn:virtualAuthenticators: true}
+Element: [[[[ChromeDriver: chrome on mac (fbe9e02d874e8e50715e885e59c63bda)] -&gt; css selector: div.position-list.position-list.col-12.d-flex.flex-wrap.mt-5.pl-2.pr-2 &gt; div]] -&gt; xpath: .//a[contains(text(), &apos;View Role&apos;)]]
+Session ID: fbe9e02d874e8e50715e885e59c63bda
 	at org.openqa.selenium.remote.ErrorCodec.decode(ErrorCodec.java:167)
 	at org.openqa.selenium.remote.codec.w3c.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:138)
 	at org.openqa.selenium.remote.codec.w3c.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:50)
@@ -256,15 +185,43 @@ Session ID: 1fed7d9606dea1c5b9cf6f545622567c
 	at org.openqa.selenium.remote.RemoteWebDriver.execute(RemoteWebDriver.java:518)
 	at org.openqa.selenium.remote.RemoteWebElement.execute(RemoteWebElement.java:223)
 	at org.openqa.selenium.remote.RemoteWebElement.click(RemoteWebElement.java:76)
-	at pages.QAJobsPage.clickFirstViewRole(QAJobsPage.java:56)
-	at tests.InsiderQATest.testViewRoleRedirectsToLeverPage(InsiderQATest.java:63)
+	at pages.QAJobsPage.clickFirstViewRoleAndSwitchToNewTab(QAJobsPage.java:68)
+	at tests.QATest.testViewRoleRedirectsToLeverPage(QATest.java:72)
 	at java.base/java.util.ArrayList.forEach(ArrayList.java:1604)
 ... Removed 33 stack frames
 </div> <!-- stack-trace -->
+                  <em>
+(Verify that clicking 'View Role' redirects to the Lever application form.)                  </em>
                 </div> <!-- method-content -->
               </div> <!-- method -->
             </div> <!-- main-panel-content rounded-window-bottom -->
           </div> <!-- suite-Surefire_suite-class-failed -->
+          <div class="suite-Surefire_suite-class-passed">
+            <div class="main-panel-header rounded-window-top">
+              <img src="passed.png"/>
+              <span class="class-name">tests.QATest</span>
+            </div> <!-- main-panel-header rounded-window-top -->
+            <div class="main-panel-content rounded-window-bottom">
+              <div class="method">
+                <div class="method-content">
+                  <a name="testCareerPageBlocksAreVisible">
+                  </a> <!-- testCareerPageBlocksAreVisible -->
+                  <span class="method-name">testCareerPageBlocksAreVisible</span>
+                  <em>
+(Verify that Career page blocks (Locations, Teams, Life at Insider) are visible.)                  </em>
+                </div> <!-- method-content -->
+              </div> <!-- method -->
+              <div class="method">
+                <div class="method-content">
+                  <a name="testHomePageIsOpened">
+                  </a> <!-- testHomePageIsOpened -->
+                  <span class="method-name">testHomePageIsOpened</span>
+                  <em>
+(Verify that Insider homepage is opened successfully.)                  </em>
+                </div> <!-- method-content -->
+              </div> <!-- method -->
+            </div> <!-- main-panel-content rounded-window-bottom -->
+          </div> <!-- suite-Surefire_suite-class-passed -->
         </div> <!-- panel Surefire_suite -->
         <div panel-name="test-xml-Surefire_suite" class="panel">
           <div class="main-panel-header rounded-window-top">
@@ -276,7 +233,7 @@ Session ID: 1fed7d9606dea1c5b9cf6f545622567c
 &lt;suite thread-count=&quot;1&quot; name=&quot;Surefire suite&quot; verbose=&quot;0&quot;&gt;
   &lt;test thread-count=&quot;1&quot; name=&quot;Surefire test&quot; verbose=&quot;0&quot;&gt;
     &lt;classes&gt;
-      &lt;class name=&quot;tests.InsiderQATest&quot;/&gt;
+      &lt;class name=&quot;tests.QATest&quot;/&gt;
     &lt;/classes&gt;
   &lt;/test&gt; &lt;!-- Surefire test --&gt;
 &lt;/suite&gt; &lt;!-- Surefire suite --&gt;
@@ -318,26 +275,26 @@ data.addColumn('string', 'Class');
 data.addColumn('number', 'Time (ms)');
 data.addRows(4);
 data.setCell(0, 0, 0)
-data.setCell(0, 1, 'testHomePageIsOpened')
-data.setCell(0, 2, 'tests.InsiderQATest')
-data.setCell(0, 3, 13579);
+data.setCell(0, 1, 'testQAJobsFilterAndValidation')
+data.setCell(0, 2, 'tests.QATest')
+data.setCell(0, 3, 9632);
 data.setCell(1, 0, 1)
-data.setCell(1, 1, 'testCareerPageBlocksAreVisible')
-data.setCell(1, 2, 'tests.InsiderQATest')
-data.setCell(1, 3, 11926);
+data.setCell(1, 1, 'testViewRoleRedirectsToLeverPage')
+data.setCell(1, 2, 'tests.QATest')
+data.setCell(1, 3, 2265);
 data.setCell(2, 0, 2)
-data.setCell(2, 1, 'testViewRoleRedirectsToLeverPage')
-data.setCell(2, 2, 'tests.InsiderQATest')
-data.setCell(2, 3, 2757);
+data.setCell(2, 1, 'testHomePageIsOpened')
+data.setCell(2, 2, 'tests.QATest')
+data.setCell(2, 3, 1850);
 data.setCell(3, 0, 3)
-data.setCell(3, 1, 'testQAJobsFilterAndValidation')
-data.setCell(3, 2, 'tests.InsiderQATest')
-data.setCell(3, 3, 2003);
+data.setCell(3, 1, 'testCareerPageBlocksAreVisible')
+data.setCell(3, 2, 'tests.QATest')
+data.setCell(3, 3, 774);
 window.suiteTableData['Surefire_suite']= { tableData: data, tableDiv: 'times-div-Surefire_suite'}
 return data;
 }
               </script>
-              <span class="suite-total-time">Total running time: 30 seconds</span>
+              <span class="suite-total-time">Total running time: 14 seconds</span>
               <div id="times-div-Surefire_suite">
               </div> <!-- times-div-Surefire_suite -->
             </div> <!-- times-div -->
@@ -363,38 +320,34 @@ return data;
           </div> <!-- main-panel-header rounded-window-top -->
           <div class="main-panel-content rounded-window-bottom">
             <div class="chronological-class">
-              <div class="chronological-class-name">tests.InsiderQATest</div> <!-- chronological-class-name -->
+              <div class="chronological-class-name">tests.QATest</div> <!-- chronological-class-name -->
               <div class="configuration-class before">
                 <span class="method-name">setUp</span>
                 <span class="method-start">0 ms</span>
               </div> <!-- configuration-class before -->
               <div class="test-method">
-                <img src="failed.png">
-                </img>
                 <span class="method-name">testHomePageIsOpened</span>
-                <span class="method-start">9151 ms</span>
+                <span class="method-start">2276 ms</span>
               </div> <!-- test-method -->
               <div class="test-method">
-                <img src="failed.png">
-                </img>
                 <span class="method-name">testCareerPageBlocksAreVisible</span>
-                <span class="method-start">22749 ms</span>
+                <span class="method-start">4128 ms</span>
               </div> <!-- test-method -->
               <div class="test-method">
                 <img src="failed.png">
                 </img>
                 <span class="method-name">testQAJobsFilterAndValidation</span>
-                <span class="method-start">34677 ms</span>
+                <span class="method-start">4902 ms</span>
               </div> <!-- test-method -->
               <div class="test-method">
                 <img src="failed.png">
                 </img>
                 <span class="method-name">testViewRoleRedirectsToLeverPage</span>
-                <span class="method-start">36683 ms</span>
+                <span class="method-start">14539 ms</span>
               </div> <!-- test-method -->
               <div class="configuration-class after">
                 <span class="method-name">tearDown</span>
-                <span class="method-start">39443 ms</span>
+                <span class="method-start">16807 ms</span>
               </div> <!-- configuration-class after -->
           </div> <!-- main-panel-content rounded-window-bottom -->
         </div> <!-- panel -->

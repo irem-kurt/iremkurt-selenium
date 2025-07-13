@@ -3,16 +3,14 @@
 <suite thread-count="1" name="Failed suite [Surefire suite]" verbose="0">
   <test thread-count="1" name="Surefire test(failed)" verbose="0">
     <classes>
-      <class name="tests.InsiderQATest">
+      <class name="tests.QATest">
         <methods>
-          <include name="testHomePageIsOpened"/>
-          <include name="testViewRoleRedirectsToLeverPage"/>
-          <include name="testCareerPageBlocksAreVisible"/>
           <include name="testQAJobsFilterAndValidation"/>
           <include name="tearDown"/>
           <include name="setUp"/>
+          <include name="testViewRoleRedirectsToLeverPage"/>
         </methods>
-      </class> <!-- tests.InsiderQATest -->
+      </class> <!-- tests.QATest -->
     </classes>
   </test> <!-- Surefire test(failed) -->
 </suite> <!-- Failed suite [Surefire suite] -->
