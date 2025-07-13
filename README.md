@@ -77,14 +77,38 @@ mvn test
 
 └── **InsiderQATest.java**    // Main test class with 4 TestNG test methods
 
+---
+## ✅ What is Tested
+
+This test suite validates the end-to-end flow of the QA job listings page including:
+
+### 🏠 Homepage Verification
+- Confirms that the main website is accessible and the homepage is loaded.
+
+### 🧭 Career Page Navigation & Block Visibility
+- Navigates through the **Company > Careers** path and verifies the visibility of:
+   - **Locations** block
+   - **Teams** block
+   - **Life at Insider** block
+
+### 🧪 Job Filtering & Listing Validation
+- Opens the **QA-specific careers page**
+- Clicks **See all QA jobs**
+- Applies filters:
+   - **Location:** Istanbul, Turkiye
+   - **Department:** Quality Assurance
+- Verifies that all listed jobs:
+   - Include **"Quality Assurance"** in their title
+   - Show **Quality Assurance** as the department
+   - Are located in **Istanbul, Turkiye**
+
+### 🔗 View Role Redirection Check
+- Clicks the **View Role** button for the first QA job
+- Confirms redirection to the **Lever.co** application form
 
 ---
+
 ⚠️ Known Issues
-* The test currently only works reliably on larger screens (e.g., 15"+ MacBook or 1920x1080 resolution).
-On smaller screens like a 13-inch MacBook, some UI elements do not render or behave properly, especially dropdown filters and job cards.
-
-* Job filtering sometimes relies on dynamic dropdowns rendered by Select2, which may cause instability depending on screen size or resolution.
-
 * Using Thread.sleep() was necessary in a few places to account for UI delays — can be improved with fluent waits.
 ---
 👩‍💻 Author
