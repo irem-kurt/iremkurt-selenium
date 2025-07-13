@@ -6,12 +6,14 @@ import org.openqa.selenium.support.ui.ExpectedConditions;
 import org.openqa.selenium.support.ui.WebDriverWait;
 
 import java.time.Duration;
+import java.util.List;
 import java.util.Set;
 
 public class QAJobsPage extends BasePage {
     private By departmentFilterQATitle = By.cssSelector("#select2-filter-by-department-container[title='Quality Assurance']");
     private By locationFilter = By.cssSelector("#select2-filter-by-location-container");
     private By departmentFilter = By.cssSelector("#select2-filter-by-department-container");
+
     public QAJobsPage(WebDriver driver) {
         super(driver);
     }
@@ -31,7 +33,9 @@ public class QAJobsPage extends BasePage {
     public void filterJobsByDepartment(String department) {
         waitForElementToBeVisible(departmentFilterQATitle, 20); //Added due to long loading time of job filters.
         clickOnObject(departmentFilter);
-        clickOnObject(By.cssSelector("li[data-select2-id*= '"+department+"' ]"));
+        //clickOnObject(By.cssSelector("li[data-select2-id*= '"+department+"' ]"));
+        clickOnObject(By.xpath("//li[contains(@class,'select2-results__option') and text()='" + department + "']"));
+
         System.out.println("✅ Department selected using native <select>: " + department);
     }
 
@@ -41,7 +45,8 @@ public class QAJobsPage extends BasePage {
         JavascriptExecutor js = (JavascriptExecutor) driver;
 
         // 1. Locate the first job card (position)
-        By jobCardSelector = By.cssSelector("div.position-list.position-list.col-12.d-flex.flex-wrap.mt-5.pl-2.pr-2 > div");
+        By jobCardSelector = By.cssSelector("div.position-list > div.position-list-item");
+        // Updated selector to match the new structure
         wait.until(ExpectedConditions.presenceOfElementLocated(jobCardSelector)); // wait for stability
 
         WebElement jobCard = driver.findElements(jobCardSelector).get(0); // Get the first job card
@@ -90,4 +95,8 @@ public class QAJobsPage extends BasePage {
         ));
         System.out.println("✅ Job list loaded.");
     }
+    public List<WebElement> getAllVisibleJobCards() {
+        return driver.findElements(By.cssSelector("div.position-list-item"));
+    }
+
 }

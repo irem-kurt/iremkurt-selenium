@@ -1,7 +1,6 @@
 package tests;
 
 import io.github.bonigarcia.wdm.WebDriverManager;
-import org.openqa.selenium.By;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.chrome.ChromeDriver;
@@ -62,10 +61,10 @@ public class QATest {
         Thread.sleep(2000);
         qaJobsPage.waitUntilJobsAreLoaded();
 
-        WebElement firstJob = driver.findElement(By.cssSelector("div.position-list-item"));
-
-        Assert.assertTrue(firstJob.getText().contains("Quality Assurance"), "❌ Job not filtered by department!");
-        Assert.assertTrue(firstJob.getText().contains("Istanbul"), "❌ Job not filtered by location!");
+        for (WebElement job : qaJobsPage.getAllVisibleJobCards()) {
+            Assert.assertTrue(job.getText().contains("Istanbul"));
+            Assert.assertTrue(job.getText().contains("Quality Assurance"));
+        }
     }
 
     @Test(priority = 4, description = "Verify that clicking 'View Role' redirects to the Lever application form.")

@@ -9,37 +9,13 @@
 <table>
 <tr><th>Test</th><th># Passed</th><th># Skipped</th><th># Retried</th><th># Failed</th><th>Time (ms)</th><th>Included Groups</th><th>Excluded Groups</th></tr>
 <tr><th colspan="8">Surefire suite</th></tr>
-<tr><td><a href="#t0">Surefire test</a></td><td class="num">2</td><td class="num">0</td><td class="num">0</td><td class="num attn">2</td><td class="num">16,953</td><td></td><td></td></tr>
+<tr><td><a href="#t0">Surefire test</a></td><td class="num">4</td><td class="num">0</td><td class="num">0</td><td class="num">0</td><td class="num">19,949</td><td></td><td></td></tr>
 </table>
-<table id='summary'><thead><tr><th>Class</th><th>Method</th><th>Start</th><th>Time (ms)</th></tr></thead><tbody><tr><th colspan="4">Surefire suite</th></tr></tbody><tbody id="t0"><tr><th colspan="4">Surefire test &#8212; failed</th></tr><tr class="failedeven"><td rowspan="2">tests.QATest</td><td><a href="#m0">testQAJobsFilterAndValidation</a></td><td rowspan="1">1752430943898</td><td rowspan="1">9632</td></tr><tr class="failedeven"><td><a href="#m1">testViewRoleRedirectsToLeverPage</a></td><td rowspan="1">1752430953535</td><td rowspan="1">2265</td></tr><tr><th colspan="4">Surefire test &#8212; passed</th></tr><tr class="passedeven"><td rowspan="2">tests.QATest</td><td><a href="#m2">testCareerPageBlocksAreVisible</a></td><td rowspan="1">1752430943124</td><td rowspan="1">774</td></tr><tr class="passedeven"><td><a href="#m3">testHomePageIsOpened</a></td><td rowspan="1">1752430941272</td><td rowspan="1">1850</td></tr></tbody>
+<table id='summary'><thead><tr><th>Class</th><th>Method</th><th>Start</th><th>Time (ms)</th></tr></thead><tbody><tr><th colspan="4">Surefire suite</th></tr></tbody><tbody id="t0"><tr><th colspan="4">Surefire test &#8212; passed</th></tr><tr class="passedeven"><td rowspan="4">tests.QATest</td><td><a href="#m0">testCareerPageBlocksAreVisible</a></td><td rowspan="1">1752436766540</td><td rowspan="1">903</td></tr><tr class="passedeven"><td><a href="#m1">testHomePageIsOpened</a></td><td rowspan="1">1752436764569</td><td rowspan="1">1967</td></tr><tr class="passedeven"><td><a href="#m2">testQAJobsFilterAndValidation</a></td><td rowspan="1">1752436767443</td><td rowspan="1">9866</td></tr><tr class="passedeven"><td><a href="#m3">testViewRoleRedirectsToLeverPage</a></td><td rowspan="1">1752436777310</td><td rowspan="1">4184</td></tr></tbody>
 </table>
-<h2>Surefire test</h2><h3 id="m0">tests.QATest#testQAJobsFilterAndValidation</h3><table class="result"><tr><th>Exception</th></tr><tr><td><div class="stacktrace">java.lang.AssertionError: ❌ Job not filtered by department! expected [true] but found [false]
-	at tests.QATest.testQAJobsFilterAndValidation(QATest.java:66)
-	at java.base/java.util.ArrayList.forEach(ArrayList.java:1604)
-... Removed 33 stack frames</div></td></tr></table><p class="totop"><a href="#summary">back to summary</a></p>
-<h3 id="m1">tests.QATest#testViewRoleRedirectsToLeverPage</h3><table class="result"><tr><th>Exception</th></tr><tr><td><div class="stacktrace">org.openqa.selenium.ElementClickInterceptedException: element click intercepted: Element &lt;a href=&quot;https://jobs.lever.co/useinsider/6b1cb4da-e2b8-4eff-83b7-2931c44b4e69&quot; class=&quot;btn btn-navy rounded pt-2 pr-5 pb-2 pl-5&quot; target=&quot;_blank&quot;&gt;...&lt;/a&gt; is not clickable at point (270, 210). Other element would receive the click: &lt;section id=&quot;career-position-filter&quot; class=&quot;bg-light&quot;&gt;...&lt;/section&gt;
-  (Session info: chrome=138.0.7204.101)
-Build info: version: &apos;4.21.0&apos;, revision: &apos;79ed462ef4&apos;
-System info: os.name: &apos;Mac OS X&apos;, os.arch: &apos;aarch64&apos;, os.version: &apos;15.4.1&apos;, java.version: &apos;24.0.1&apos;
-Driver info: org.openqa.selenium.chrome.ChromeDriver
-Command: [fbe9e02d874e8e50715e885e59c63bda, clickElement {id=f.743D88F009AD5B6AC1B4E0C936E5622B.d.B9AF698E851489413E84B4A385A1A4AF.e.312}]
-Capabilities {acceptInsecureCerts: false, browserName: chrome, browserVersion: 138.0.7204.101, chrome: {chromedriverVersion: 138.0.7204.94 (545025748884..., userDataDir: /var/folders/hz/cwg6cg4n5ms...}, fedcm:accounts: true, goog:chromeOptions: {debuggerAddress: localhost:64594}, networkConnectionEnabled: false, pageLoadStrategy: normal, platformName: mac, proxy: Proxy(), se:cdp: ws://localhost:64594/devtoo..., se:cdpVersion: 138.0.7204.101, setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, webauthn:extension:credBlob: true, webauthn:extension:largeBlob: true, webauthn:extension:minPinLength: true, webauthn:extension:prf: true, webauthn:virtualAuthenticators: true}
-Element: [[[[ChromeDriver: chrome on mac (fbe9e02d874e8e50715e885e59c63bda)] -&gt; css selector: div.position-list.position-list.col-12.d-flex.flex-wrap.mt-5.pl-2.pr-2 &gt; div]] -&gt; xpath: .//a[contains(text(), &apos;View Role&apos;)]]
-Session ID: fbe9e02d874e8e50715e885e59c63bda
-	at org.openqa.selenium.remote.ErrorCodec.decode(ErrorCodec.java:167)
-	at org.openqa.selenium.remote.codec.w3c.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:138)
-	at org.openqa.selenium.remote.codec.w3c.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:50)
-	at org.openqa.selenium.remote.HttpCommandExecutor.execute(HttpCommandExecutor.java:190)
-	at org.openqa.selenium.remote.service.DriverCommandExecutor.invokeExecute(DriverCommandExecutor.java:216)
-	at org.openqa.selenium.remote.service.DriverCommandExecutor.execute(DriverCommandExecutor.java:174)
-	at org.openqa.selenium.remote.RemoteWebDriver.execute(RemoteWebDriver.java:518)
-	at org.openqa.selenium.remote.RemoteWebElement.execute(RemoteWebElement.java:223)
-	at org.openqa.selenium.remote.RemoteWebElement.click(RemoteWebElement.java:76)
-	at pages.QAJobsPage.clickFirstViewRoleAndSwitchToNewTab(QAJobsPage.java:68)
-	at tests.QATest.testViewRoleRedirectsToLeverPage(QATest.java:72)
-	at java.base/java.util.ArrayList.forEach(ArrayList.java:1604)
-... Removed 33 stack frames</div></td></tr></table><p class="totop"><a href="#summary">back to summary</a></p>
-<h3 id="m2">tests.QATest#testCareerPageBlocksAreVisible</h3><table class="result"><tr><th class="invisible"/></tr></table><p class="totop"><a href="#summary">back to summary</a></p>
-<h3 id="m3">tests.QATest#testHomePageIsOpened</h3><table class="result"><tr><th class="invisible"/></tr></table><p class="totop"><a href="#summary">back to summary</a></p>
+<h2>Surefire test</h2><h3 id="m0">tests.QATest#testCareerPageBlocksAreVisible</h3><table class="result"><tr><th class="invisible"/></tr></table><p class="totop"><a href="#summary">back to summary</a></p>
+<h3 id="m1">tests.QATest#testHomePageIsOpened</h3><table class="result"><tr><th class="invisible"/></tr></table><p class="totop"><a href="#summary">back to summary</a></p>
+<h3 id="m2">tests.QATest#testQAJobsFilterAndValidation</h3><table class="result"><tr><th class="invisible"/></tr></table><p class="totop"><a href="#summary">back to summary</a></p>
+<h3 id="m3">tests.QATest#testViewRoleRedirectsToLeverPage</h3><table class="result"><tr><th class="invisible"/></tr></table><p class="totop"><a href="#summary">back to summary</a></p>
 </body>
 </html>
